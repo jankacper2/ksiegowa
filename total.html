@@ -1,25 +1,42 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="pl">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Wersja testowa: usuń tę linijkę przed oficjalnym startem -->
   <meta name="robots" content="noindex, nofollow">
-  <title>Klaudia Urbanowicz — księgowa w Gdańsku</title>
-  <meta name="description" content="Księgowość dla małych firm i jednoosobowych działalności w Gdańsku. Prowadzę ją osobiście — spokojnie, bez żargonu i bez call center.">
+  <title>TOTAL Biuro Rachunkowe — Klaudia Urbanowicz, Gdańsk</title>
+  <meta name="description" content="Księgowość dla małych firm i jednoosobowych działalności w Gdańsku. Biuro Rachunkowe TOTAL — prowadzę je osobiście, spokojnie i bez żargonu.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='2' y='8' width='22' height='22' rx='4' fill='white' stroke='%23363636' stroke-width='3'/%3E%3Cpath d='M7 18l6 6L30 3' fill='none' stroke='%23E02035' stroke-width='4.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style-navy.css">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Outfit:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="total.css">
 </head>
 <body>
+
+<!-- Ikona „odhaczonego kwadracika” z logo — używana w całej stronie -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="tick" viewBox="0 0 32 32">
+    <rect x="2" y="8" width="22" height="22" rx="4" fill="none" stroke="currentColor" stroke-width="3"/>
+    <path class="tick__mark" d="M7 18l6 6L30 3" fill="none" stroke="#E02035" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="box" viewBox="0 0 32 32">
+    <rect x="2" y="8" width="22" height="22" rx="4" fill="none" stroke="currentColor" stroke-width="3"/>
+  </symbol>
+</svg>
 
 <!-- ============ NAWIGACJA ============ -->
 <header class="nav">
   <div class="wrap nav__inner">
-    <a href="#" class="logo">
-      <span class="logo__mark">KU</span>
-      <span class="logo__text">Klaudia Urbanowicz<small>księgowa · Gdańsk</small></span>
+    <!-- Logo odtworzone w kodzie (ostre na każdym ekranie); oryginał: total_logo.png -->
+    <a href="#" class="logo" aria-label="TOTAL Biuro Rachunkowe Klaudia Urbanowicz — strona główna">
+      <svg class="logo__mark" viewBox="0 0 32 32" aria-hidden="true">
+        <rect x="2" y="8" width="22" height="22" rx="3.5"/>
+        <path d="M6.5 17.5l6.5 6.5L30.5 2.5"/>
+      </svg>
+      <span class="logo__total">TOTAL</span>
+      <span class="logo__sub">Biuro Rachunkowe<strong>Klaudia Urbanowicz</strong></span>
     </a>
     <button class="nav__toggle" aria-label="Menu" aria-expanded="false">
       <span></span><span></span>
@@ -41,59 +58,71 @@
   <div class="wrap hero__grid">
     <div class="hero__text">
       <p class="hand hero__hello">Dzień dobry!</p>
-      <h1>Twoja księgowa, <br>a nie kolejny <span class="underline">numer w kolejce</span>.</h1>
+      <h1>Twoje sprawy księgowe — <span class="done">odhaczone<svg viewBox="0 0 40 32" aria-hidden="true"><path d="M4 17l10 10L37 3"/></svg></span></h1>
       <p class="lead">
-        Prowadzę księgowość małych firm i jednoosobowych działalności z Gdańska i okolic.
-        Osobiście — więc zawsze wiesz, do kogo dzwonisz, i zawsze dostajesz odpowiedź po ludzku.
+        Jestem Klaudia i prowadzę <strong>Biuro Rachunkowe TOTAL</strong> w Gdańsku.
+        Zajmuję się księgowością małych firm i jednoosobowych działalności — osobiście,
+        więc zawsze wiesz, do kogo dzwonisz.
       </p>
       <div class="hero__cta">
         <a href="#kontakt" class="btn">Umówmy się na kawę</a>
         <a href="tel:+48500000000" class="btn btn--ghost">500 000 000</a>
       </div>
-      <p class="hero__note">Pierwsza rozmowa jest bezpłatna i do niczego nie zobowiązuje.</p>
+      <p class="hero__note">
+        <svg class="ico"><use href="#tick"/></svg>
+        Pierwsza rozmowa jest bezpłatna i do niczego nie zobowiązuje.
+      </p>
     </div>
 
-    <div class="hero__photo">
-      <!-- Podmień na prawdziwe zdjęcie: <img src="zdjecie.jpg" alt="Klaudia Urbanowicz w swoim biurze"> -->
+    <div class="hero__visual">
       <div class="portrait">
-        <svg viewBox="0 0 200 200" aria-hidden="true" class="portrait__art">
-          <circle cx="100" cy="78" r="34" fill="#EBCFB2"/>
-          <path d="M60 70c0-28 18-44 40-44s42 14 40 46c-6-10-18-20-40-22-18 2-32 10-40 20z" fill="#5A3E30"/>
-          <path d="M40 200c4-44 30-70 60-70s56 26 60 70z" fill="#24365C"/>
-        </svg>
-        <span class="hand portrait__label">tu będzie moje zdjęcie :)</span>
+        <!-- Zdjęcie tymczasowe -->
+        <img src="zdjecie-klaudia.webp" alt="Klaudia Urbanowicz przy biurku w swoim biurze" width="1192" height="1320">
       </div>
-      <div class="sticky">
-        <span class="hand">Biuro we Wrzeszczu —<br>kawa zawsze gotowa ☕</span>
+
+      <div class="checklist" aria-label="Przykładowa lista spraw na ten miesiąc">
+        <p class="checklist__title hand">Twój listopad:</p>
+        <ul>
+          <li><svg class="ico ico--anim" viewBox="0 0 32 32" aria-hidden="true"><rect x="2" y="8" width="22" height="22" rx="4"/><path class="draw" d="M7 18l6 6L30 3"/></svg> ZUS opłacony</li>
+          <li><svg class="ico ico--anim" viewBox="0 0 32 32" aria-hidden="true"><rect x="2" y="8" width="22" height="22" rx="4"/><path class="draw" d="M7 18l6 6L30 3"/></svg> JPK_VAT wysłany</li>
+          <li><svg class="ico ico--anim" viewBox="0 0 32 32" aria-hidden="true"><rect x="2" y="8" width="22" height="22" rx="4"/><path class="draw" d="M7 18l6 6L30 3"/></svg> zaliczka PIT policzona</li>
+          <li class="is-todo"><svg class="ico"><use href="#box"/></svg> kawa z Klaudią</li>
+        </ul>
       </div>
-      <div class="leaf leaf--1" aria-hidden="true"></div>
-      <div class="leaf leaf--2" aria-hidden="true"></div>
     </div>
+  </div>
+</section>
+
+<!-- ============ PASEK ZAUFANIA ============ -->
+<section class="trust" aria-label="W skrócie">
+  <div class="wrap trust__inner">
+    <div class="trust__item"><svg class="ico ico--light"><use href="#tick"/></svg><span><strong>12 lat</strong> w księgowości</span></div>
+    <div class="trust__item"><svg class="ico ico--light"><use href="#tick"/></svg><span><strong>Certyfikat</strong> Ministra Finansów</span></div>
+    <div class="trust__item"><svg class="ico ico--light"><use href="#tick"/></svg><span><strong>Ubezpieczenie OC</strong> biura rachunkowego</span></div>
+    <div class="trust__item"><svg class="ico ico--light"><use href="#tick"/></svg><span><strong>Odpowiedź</strong> zwykle tego samego dnia</span></div>
   </div>
 </section>
 
 <!-- ============ DLACZEGO JA ============ -->
 <section class="why">
   <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Dlaczego małe biuro</p>
+      <h2>Bo w małej firmie liczy się człowiek</h2>
+    </div>
     <div class="why__grid">
       <article class="card">
-        <div class="card__icon">
-          <svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
-        </div>
+        <span class="card__num">01</span>
         <h3>Jedna osoba, jeden numer</h3>
         <p>Nie przekazuję Cię między działami. Dzwonisz — odbieram ja. Piszesz — odpisuję ja, zwykle jeszcze tego samego dnia.</p>
       </article>
       <article class="card">
-        <div class="card__icon">
-          <svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H8l-4 4V6a2 2 0 0 1 2-2z"/></svg>
-        </div>
+        <span class="card__num">02</span>
         <h3>Tłumaczę bez żargonu</h3>
         <p>Zamiast „rozliczenia w trybie art. 22…” usłyszysz, ile zapłacisz, kiedy i dlaczego. Żadne pytanie nie jest głupie.</p>
       </article>
       <article class="card">
-        <div class="card__icon">
-          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 5v5.4l3.7 2.2-.8 1.3L11 13V7z"/></svg>
-        </div>
+        <span class="card__num">03</span>
         <h3>Spokój przed terminami</h3>
         <p>Przypominam o ZUS-ie, podatkach i dokumentach, zanim zrobi się nerwowo. Ty prowadzisz firmę, ja pilnuję kalendarza.</p>
       </article>
@@ -109,11 +138,6 @@
         <!-- Drugie zdjęcie, np. biurko / biuro: <img src="biuro.jpg" alt="Moje biuro"> -->
         <div class="about__placeholder hand">zdjęcie biura<br>albo przy biurku</div>
       </div>
-      <ul class="facts">
-        <li><strong>12 lat</strong> w księgowości</li>
-        <li><strong>~40</strong> firm pod opieką</li>
-        <li><strong>Certyfikat</strong> Ministra Finansów</li>
-      </ul>
     </div>
     <div class="about__text">
       <p class="eyebrow">O mnie</p>
@@ -124,7 +148,7 @@
         maile bez odpowiedzi, poczucie, że są „za mali”, żeby ktoś się nimi przejął.
       </p>
       <p>
-        Dlatego w 2019 roku otworzyłam własne biuro we Wrzeszczu. Celowo małe. Pracuję z
+        Dlatego otworzyłam własne biuro — <strong>TOTAL</strong>. Celowo małe. Pracuję z
         fryzjerkami, programistami, fotografami, właścicielami kawiarni i małych sklepów —
         z ludźmi, którzy chcą robić swoje, a nie zastanawiać się nad przepisami.
       </p>
@@ -148,26 +172,32 @@
 
     <div class="services__grid">
       <div class="service">
+        <svg class="ico ico--lg"><use href="#tick"/></svg>
         <h3>Książka przychodów i rozchodów</h3>
         <p>Dla jednoosobowych działalności na skali, podatku liniowym i ryczałcie. Najczęstszy wybór moich klientów.</p>
       </div>
       <div class="service">
+        <svg class="ico ico--lg"><use href="#tick"/></svg>
         <h3>Ryczałt ewidencjonowany</h3>
         <p>Prosto i przejrzyście. Pomogę też sprawdzić, czy ryczałt w ogóle się Tobie opłaca.</p>
       </div>
       <div class="service">
+        <svg class="ico ico--lg"><use href="#tick"/></svg>
         <h3>Pełna księgowość</h3>
         <p>Dla małych spółek z o.o. i spółek osobowych. Bilans, sprawozdania, KRS — bez stresu.</p>
       </div>
       <div class="service">
+        <svg class="ico ico--lg"><use href="#tick"/></svg>
         <h3>Kadry i płace</h3>
         <p>Umowy, listy płac, ZUS, PIT-y dla pracowników. Pierwszy pracownik? Przeprowadzę Cię przez to krok po kroku.</p>
       </div>
       <div class="service">
+        <svg class="ico ico--lg"><use href="#tick"/></svg>
         <h3>Zakładanie działalności</h3>
         <p>Wybór formy opodatkowania, kody PKD, rejestracja w CEIDG, ulgi na start. Usiądziemy i wszystko ustalimy.</p>
       </div>
       <div class="service">
+        <svg class="ico ico--lg"><use href="#tick"/></svg>
         <h3>KSeF i e-faktury</h3>
         <p>Pomagam przejść na Krajowy System e-Faktur tak, żeby nie przewrócił Ci firmy do góry nogami.</p>
       </div>
@@ -180,26 +210,26 @@
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow">Jak zaczynamy</p>
-      <h2>Przejście do mnie jest prostsze, niż myślisz</h2>
+      <h2>Cztery kroki i masz to z głowy</h2>
     </div>
     <ol class="steps__list">
       <li>
-        <span class="steps__num">1</span>
+        <svg class="ico ico--step" viewBox="0 0 32 32" aria-hidden="true"><rect x="2" y="8" width="22" height="22" rx="4"/><path class="draw" d="M7 18l6 6L30 3"/></svg>
         <h3>Rozmawiamy</h3>
         <p>Przy kawie w biurze, przez telefon albo online. Opowiadasz o firmie, ja zadaję pytania.</p>
       </li>
       <li>
-        <span class="steps__num">2</span>
+        <svg class="ico ico--step" viewBox="0 0 32 32" aria-hidden="true"><rect x="2" y="8" width="22" height="22" rx="4"/><path class="draw" d="M7 18l6 6L30 3"/></svg>
         <h3>Dostajesz wycenę</h3>
         <p>Konkretną, na piśmie, bez gwiazdek i ukrytych opłat.</p>
       </li>
       <li>
-        <span class="steps__num">3</span>
+        <svg class="ico ico--step" viewBox="0 0 32 32" aria-hidden="true"><rect x="2" y="8" width="22" height="22" rx="4"/><path class="draw" d="M7 18l6 6L30 3"/></svg>
         <h3>Przejmuję dokumenty</h3>
         <p>Sama kontaktuję się z poprzednim biurem i zgłaszam zmiany do urzędów.</p>
       </li>
       <li>
-        <span class="steps__num">4</span>
+        <svg class="ico ico--step" viewBox="0 0 32 32" aria-hidden="true"><rect x="2" y="8" width="22" height="22" rx="4"/><path class="draw" d="M7 18l6 6L30 3"/></svg>
         <h3>Masz spokój</h3>
         <p>Co miesiąc wysyłasz dokumenty (zdjęcie z telefonu wystarczy), a ja resztę.</p>
       </li>
@@ -289,14 +319,14 @@
     <div class="faq__list">
       <details>
         <summary>Czy muszę przychodzić do biura?</summary>
-        <p>Nie. Większość klientów przesyła dokumenty mailem lub przez aplikację, a rozmawiamy przez telefon. Ale jeśli wolisz spotkać się osobiście — zapraszam do Wrzeszcza.</p>
+        <p>Nie. Większość klientów przesyła dokumenty mailem lub przez aplikację, a rozmawiamy przez telefon. Ale jeśli wolisz spotkać się osobiście — zapraszam do biura.</p>
       </details>
       <details>
         <summary>Co jeśli będziesz na urlopie albo zachorujesz?</summary>
         <p>Terminy mam zaplanowane z wyprzedzeniem, a na wypadek dłuższej nieobecności współpracuję z zaufaną księgową, która zna moje procedury. Zawsze wiesz o tym z góry.</p>
       </details>
       <details>
-        <summary>Czy mam ubezpieczenie OC?</summary>
+        <summary>Czy masz ubezpieczenie OC?</summary>
         <p>Tak, mam obowiązkowe ubezpieczenie OC biura rachunkowego. Jeśli popełnię błąd — odpowiadam za niego ja, nie Ty.</p>
       </details>
       <details>
@@ -313,59 +343,61 @@
 
 <!-- ============ KONTAKT ============ -->
 <section class="contact" id="kontakt">
-  <div class="wrap contact__grid">
-    <div class="contact__info">
-      <p class="eyebrow">Kontakt</p>
-      <h2>Porozmawiajmy o Twojej firmie</h2>
-      <p>Zadzwoń, napisz albo wpadnij. Pierwsza rozmowa nic nie kosztuje — nawet jeśli po niej zdecydujesz, że to jednak nie ja.</p>
+  <div class="contact__panel">
+    <div class="wrap contact__grid">
+      <div class="contact__info">
+        <p class="eyebrow eyebrow--light">Kontakt</p>
+        <h2>Porozmawiajmy o Twojej firmie</h2>
+        <p>Zadzwoń, napisz albo wpadnij. Pierwsza rozmowa nic nie kosztuje — nawet jeśli po niej zdecydujesz, że to jednak nie ja.</p>
 
-      <ul class="contact__list">
-        <li>
-          <span class="contact__label">Telefon</span>
-          <a href="tel:+48500000000">500 000 000</a>
-        </li>
-        <li>
-          <span class="contact__label">E-mail</span>
-          <a href="mailto:kontakt@example.pl">kontakt@example.pl</a>
-        </li>
-        <li>
-          <span class="contact__label">Biuro</span>
-          ul. Przykładowa 1/2, 80-000 Gdańsk-Wrzeszcz<br>
-          <a href="https://maps.google.com/?q=Gdańsk+Wrzeszcz" target="_blank" rel="noopener">pokaż na mapie →</a>
-        </li>
-        <li>
-          <span class="contact__label">Kiedy</span>
-          pon.–pt. 9:00–17:00<br>spotkania po umówieniu
-        </li>
-      </ul>
+        <ul class="contact__list">
+          <li>
+            <span class="contact__label">Telefon</span>
+            <a href="tel:+48500000000">500 000 000</a>
+          </li>
+          <li>
+            <span class="contact__label">E-mail</span>
+            <a href="mailto:kontakt@example.pl">kontakt@example.pl</a>
+          </li>
+          <li>
+            <span class="contact__label">Biuro</span>
+            ul. Przykładowa 1/2, 80-000 Gdańsk<br>
+            <a href="https://maps.google.com/?q=Gdańsk" target="_blank" rel="noopener">pokaż na mapie →</a>
+          </li>
+          <li>
+            <span class="contact__label">Kiedy</span>
+            pon.–pt. 9:00–17:00<br>spotkania po umówieniu
+          </li>
+        </ul>
+      </div>
+
+      <form class="contact__form" action="mailto:kontakt@example.pl" method="post" enctype="text/plain">
+        <p class="hand contact__form-title">Napisz kilka słów</p>
+        <label>
+          Jak masz na imię?
+          <input type="text" name="imie" required>
+        </label>
+        <label>
+          Telefon lub e-mail
+          <input type="text" name="kontakt" required>
+        </label>
+        <label>
+          Czym zajmuje się Twoja firma?
+          <select name="forma">
+            <option>Dopiero zakładam działalność</option>
+            <option>Jednoosobowa działalność</option>
+            <option>Spółka</option>
+            <option>Jeszcze nie wiem</option>
+          </select>
+        </label>
+        <label>
+          Wiadomość
+          <textarea name="wiadomosc" rows="4" placeholder="Np. prowadzę sklep internetowy, mam ok. 30 faktur miesięcznie…"></textarea>
+        </label>
+        <button type="submit" class="btn btn--full">Wyślij wiadomość</button>
+        <p class="contact__small">Odpisuję zwykle tego samego dnia roboczego.</p>
+      </form>
     </div>
-
-    <form class="contact__form" action="mailto:kontakt@example.pl" method="post" enctype="text/plain">
-      <p class="hand contact__form-title">Napisz kilka słów</p>
-      <label>
-        Jak masz na imię?
-        <input type="text" name="imie" required>
-      </label>
-      <label>
-        Telefon lub e-mail
-        <input type="text" name="kontakt" required>
-      </label>
-      <label>
-        Czym zajmuje się Twoja firma?
-        <select name="forma">
-          <option>Dopiero zakładam działalność</option>
-          <option>Jednoosobowa działalność</option>
-          <option>Spółka</option>
-          <option>Jeszcze nie wiem</option>
-        </select>
-      </label>
-      <label>
-        Wiadomość
-        <textarea name="wiadomosc" rows="4" placeholder="Np. prowadzę sklep internetowy, mam ok. 30 faktur miesięcznie…"></textarea>
-      </label>
-      <button type="submit" class="btn btn--full">Wyślij wiadomość</button>
-      <p class="contact__small">Odpisuję zwykle tego samego dnia roboczego.</p>
-    </form>
   </div>
 </section>
 
@@ -373,7 +405,8 @@
 
 <footer class="footer">
   <div class="wrap footer__inner">
-    <p>© <span id="year"></span> Biuro Rachunkowe Klaudia Urbanowicz · NIP 000-000-00-00</p>
+    <img src="total_logo.png" alt="TOTAL Biuro Rachunkowe Klaudia Urbanowicz" width="289" height="148" class="footer__logo">
+    <p>© <span id="year"></span> TOTAL Biuro Rachunkowe Klaudia Urbanowicz · NIP 000-000-00-00</p>
     <p class="hand">zrobione z kawą w Gdańsku</p>
   </div>
 </footer>
@@ -392,6 +425,16 @@
     toggle.classList.remove('is-open');
     toggle.setAttribute('aria-expanded', false);
   }));
+
+  // Ptaszki w krokach „odhaczają się”, gdy sekcja pojawi się na ekranie
+  const steps = document.querySelector('.steps__list');
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver((entries, obs) => {
+      if (entries[0].isIntersecting) { steps.classList.add('is-done'); obs.disconnect(); }
+    }, { rootMargin: '0px 0px -35% 0px' }).observe(steps);
+  } else {
+    steps.classList.add('is-done');
+  }
 </script>
 </body>
 </html>

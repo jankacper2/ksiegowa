@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Outfit:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="total.css?v=3">
+  <link rel="stylesheet" href="total.css?v=4">
   <script>
     // Podgląd wariantów kolorystycznych: total.html?wariant=oszczedny|zielony|zloty|granatowy
     (function () {
@@ -425,39 +425,12 @@
   </div>
 </footer>
 
-<!-- Przełącznik wariantów — tylko do podglądu, usunąć przed startem -->
-<div class="switcher" role="group" aria-label="Wariant kolorystyczny">
-  <span class="switcher__label">Wariant:</span>
-  <div class="switcher__opts">
-    <button type="button" data-w=""><span class="switcher__dot" style="background:#E02035"></span>Obecny</button>
-    <button type="button" data-w="oszczedny"><span class="switcher__dot" style="background:linear-gradient(90deg,#E02035 50%,#363636 50%)"></span>Czerwień tylko w logo</button>
-    <button type="button" data-w="zielony"><span class="switcher__dot" style="background:#4A9160"></span>Zielony</button>
-    <button type="button" data-w="zloty"><span class="switcher__dot" style="background:#D29B32"></span>Złoty</button>
-    <button type="button" data-w="granatowy"><span class="switcher__dot" style="background:#2B4A86"></span>Granatowy</button>
-  </div>
-</div>
-
 <script>
-  // Przełącznik wariantów: zmienia kolory, link w pasku adresu i kolor ptaszka w ikonce karty
+  // Ikonka karty w kolorze ptaszka z aktualnego wariantu
   (function () {
-    const root = document.documentElement;
-    const buttons = document.querySelectorAll('.switcher button');
-    const favicon = document.querySelector('link[rel="icon"]');
-    const setFavicon = () => {
-      const c = getComputedStyle(root).getPropertyValue('--logo-tick').trim();
-      favicon.href = "data:image/svg+xml," + encodeURIComponent(
-        "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect x='2' y='8' width='22' height='22' rx='4' fill='white' stroke='#363636' stroke-width='3'/><path d='M7 18l6 6L30 3' fill='none' stroke='" + c + "' stroke-width='4.5' stroke-linecap='round' stroke-linejoin='round'/></svg>");
-    };
-    const apply = (w) => {
-      if (w) root.dataset.wariant = w; else delete root.dataset.wariant;
-      buttons.forEach(b => b.setAttribute('aria-pressed', b.dataset.w === w));
-      const url = new URL(location.href);
-      if (w) url.searchParams.set('wariant', w); else url.searchParams.delete('wariant');
-      history.replaceState(null, '', url);
-      setFavicon();
-    };
-    buttons.forEach(b => b.addEventListener('click', () => apply(b.dataset.w)));
-    apply(root.dataset.wariant || '');
+    const c = getComputedStyle(document.documentElement).getPropertyValue('--logo-tick').trim();
+    document.querySelector('link[rel="icon"]').href = "data:image/svg+xml," + encodeURIComponent(
+      "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect x='2' y='8' width='22' height='22' rx='4' fill='white' stroke='#363636' stroke-width='3'/><path d='M7 18l6 6L30 3' fill='none' stroke='" + c + "' stroke-width='4.5' stroke-linecap='round' stroke-linejoin='round'/></svg>");
   })();
 </script>
 

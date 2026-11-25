@@ -69,33 +69,6 @@
   --accent-on-dark: #A3BBE6;
 }
 
-/* przełącznik wariantów — tylko do podglądu, do usunięcia przed startem */
-.switcher {
-  position: fixed; z-index: 100; left: 50%; bottom: 16px; transform: translateX(-50%);
-  display: flex; align-items: center; gap: 6px;
-  background: rgba(38, 38, 38, .94); color: #fff;
-  padding: 7px 8px 7px 16px; border-radius: 999px;
-  box-shadow: 0 14px 34px -10px rgba(0, 0, 0, .5);
-  font-size: .85rem; max-width: calc(100% - 16px);
-}
-.switcher__label { opacity: .7; white-space: nowrap; margin-right: 4px; }
-.switcher__opts { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; }
-.switcher button {
-  display: flex; align-items: center; gap: 7px;
-  font: inherit; font-weight: 600; color: #fff; white-space: nowrap;
-  background: transparent; border: 0; border-radius: 999px; padding: 7px 12px; cursor: pointer;
-}
-.switcher button:hover { background: rgba(255, 255, 255, .1); }
-.switcher button[aria-pressed="true"] { background: #fff; color: #262626; }
-.switcher__dot { width: 11px; height: 11px; border-radius: 50%; flex: none; box-shadow: 0 0 0 1.5px rgba(255,255,255,.5); }
-@media (max-width: 760px) {
-  .switcher { border-radius: 20px; padding: 6px; bottom: 10px; width: calc(100% - 16px); }
-  .switcher__label { display: none; }
-  .switcher__opts { flex-wrap: wrap; justify-content: center; overflow: visible; }
-  .switcher button { padding: 6px 10px; font-size: .8rem; }
-  .footer { padding-bottom: 150px; }
-}
-
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { scroll-behavior: smooth; scroll-padding-top: 96px; }
@@ -478,7 +451,6 @@ section { padding: 96px 0; }
 /* ---------- stopka ---------- */
 .footer { padding: 8px 0 40px; color: var(--ink-soft); font-size: .92rem; }
 .footer__inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
-.footer { padding-bottom: 110px; } /* miejsce na przełącznik wariantów */
 .footer .hand { font-size: 1.35rem; color: var(--accent); }
 
 /* ---------- ruch ---------- */
